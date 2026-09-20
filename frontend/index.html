@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+
+    <!-- ADD STUDENT -->
+    <div class="card">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+
+            <input id="name" placeholder="Name" required>
+
+            <input id="email" type="email" placeholder="Email" required>
+
+            <input id="age" type="number" placeholder="Age" required>
+
+            <input id="gender" placeholder="Gender" required>
+
+            <input id="course" placeholder="Course" required>
+
+            <input id="marks" type="number" placeholder="Marks" required>
+
+            <button type="submit">
+                Add Student
+            </button>
+
+        </form>
+    </div>
+
+
+    <!-- STUDENTS -->
+    <div class="card">
+
+        <div class="heading">
+
+            <h2>Students</h2>
+
+            <button onclick="loadStudents()">
+                Refresh
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTable"></tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- AI CHATBOT -->
+    <div class="card">
+
+        <h2>AI Student Assistant</h2>
+
+        <div id="chatBox"></div>
+
+        <div class="chatInput">
+
+            <input
+                id="question"
+                placeholder="Ask something about students..."
+            >
+
+            <button onclick="askAI()">
+                Ask AI
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
